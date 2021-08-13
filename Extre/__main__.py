@@ -6,6 +6,7 @@ from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import os
 from telethon import TelegramClient
 from Extre import *
+import traceback
 from Extre.dB.database import * 
 from Extre.utils import load_module
 from Extre.utils import start_assistant
@@ -74,7 +75,7 @@ files = sorted(os.listdir("plugins"))
 for plugin_name in files:
     try:
         if plugin_name.endswith(".py"):
-            load_plugins(plugin_name[:-3])
+            load_module(plugin_name[:-3])
             if not plugin_name.startswith("__") or plugin_name.startswith("_"):
                 LOGS.info(f"ExtremeProUserbot - Official -  Installed - {plugin_name}")
     except Exception:
