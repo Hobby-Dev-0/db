@@ -63,6 +63,8 @@ def load_plugins(plugin_name):
         mod.eod = eod
         mod.edit_delete = eod
         mod.LOGS = LOGS
+        mod.command = command
+        mod.errors_handler = errors_handler
         mod.bot = bot
         mod.borg = borg
         mod.Andencento = Andencento
