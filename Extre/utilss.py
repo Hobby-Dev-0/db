@@ -528,7 +528,7 @@ def time_formatter(milliseconds: int) -> str:
 class Loader:
     def __init__(self, func=None, **args):
         self.Var = Var
-        bot.add_event_handler(func, events.NewMessage(**args))
+        client.add_event_handler(func, events.NewMessage(**args))
 
 
 # Admin checker by uniborg
@@ -598,8 +598,8 @@ def register(**args):
 
     def decorator(func):
         if not disable_edited:
-            bot.add_event_handler(func, events.MessageEdited(**args))
-        bot.add_event_handler(func, events.NewMessage(**args))
+            client.add_event_handler(func, events.MessageEdited(**args))
+        client.add_event_handler(func, events.NewMessage(**args))
         try:
             LOAD_PLUG[file_test].append(func)
         except Exception:
@@ -665,8 +665,8 @@ def command(**args):
 
     def decorator(func):
         if allow_edited_updates:
-            bot.add_event_handler(func, events.MessageEdited(**args))
-        bot.add_event_handler(func, events.NewMessage(**args))
+            client.add_event_handler(func, events.MessageEdited(**args))
+        client.add_event_handler(func, events.NewMessage(**args))
         try:
             LOAD_PLUG[file_test].append(func)
         except BaseException:
