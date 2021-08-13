@@ -5,3 +5,4 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/TeamExtremeProUserbot/ExtremeProUserbot/blob/main/LICENSE/>.
 from ..var import *
+from ..variables import *
