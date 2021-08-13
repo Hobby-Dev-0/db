@@ -8,7 +8,7 @@
 from importlib import util
 from pathlib import Path
 from sys import modules
-import .utils
+import Extre.utils
 
 
 def load_plugins(plugin_name):
