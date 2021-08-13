@@ -88,30 +88,6 @@ def load_module(shortname):
         mod.tgbot = client.tgbot
         mod.sudo_cmd = sudo_cmd
         mod.extremepro_cmd = extremepro_cmd
-        sys.modules["userbot"] = Extre or userbot or pyUltroid or None
-        sys.modules["userbot.utils"] = Extre.utils or userbot.utils or pyUltroid.utils or None
-        sys.modules["Extre.events"] = Extre.utils or userbot.utils or pyUltroid.utils or None
-        sys.modules["userbot.events"] = Extre.utils or userbot.utils or pyUltroid.utils or None
-        sys.modules["ULTRA.utils"] = Extre.utils or userbot.utils or pyUltroid.utils or None
-        sys.modules["userbot.Config"] = Extre.config or userbot.config or pyUltroid.config or None
-        sys.modules["userbot.uniborConfig"] = Extre.config or userbot.config or pyUltroid.config or None
-        sys.modules["ub"] = Extre
-        sys.modules["var"] = Extre.variables or userbot.variables or None
-        sys.modules["jarvis"] = Extre or userbot or pyUltroid or None
-        sys.modules["support"] = Extre or userbot or pyUltroid or None
-        sys.modules["userbot"] = Extre or userbot or pyUltroid or None
-        sys.modules["telebot"] = Extre or userbot or pyUltroid or None
-        sys.modules["fridaybot"] = Extre or userbot or pyUltroid or None
-        sys.modules["jarvis.utils"] = Extre.utils or userbot.utils or pyUltroid.utils or None
-        sys.modules["uniborg.util"] = Extre.utils or userbot.utils or pyUltroid.utils or None
-        sys.modules["telebot.utils"] = Extre.utils or userbot.utils or pyUltroid.utils or None
-        sys.modules["userbot.utils"] = Extre.utils or userbot.utils or pyUltroid.utils or None
-        sys.modules["userbot.events"] = Extre.utils or userbot.utils or pyUltroid.utils or None
-        sys.modules["jarvis.jconfig"] = Extre.config or userbot.config or pyUltroid.config or None
-        sys.modules["userbot.config"] = Extre.config or userbot.config or pyUltroid.config or None
-        sys.modules["fridaybot.utils"] = Extre.utils or userbot.utils or pyUltroid.utils or None
-        sys.modules["fridaybot.Config"] = Extre.config or userbot.config or pyUltroid.config or None
-        sys.modules["userbot.uniborgConfig"] = Extre.config or userbot.config or pyUltroid.config or None
         mod.amanpandey_cmd = amanpandey_cmd
         mod.edit_or_reply = edit_or_reply
         mod.logger = logging.getLogger(shortname)
@@ -121,7 +97,6 @@ def load_module(shortname):
         mod.borg = bot
         mod.edit_or_reply = edit_or_reply
         # support for paperplaneextended
-        sys.modules["userbot.mainfiles.events"] = Extre.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
