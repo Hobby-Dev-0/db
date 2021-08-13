@@ -79,7 +79,6 @@ def load_plugins(plugin_name):
         mod.callback = callback
         mod.Redis = ExtremedB.get
         modules["support"] = xxx
-        modules["var"] = .var
         modules["userbot"] = xxx
         modules["userbot.utils"] = xxx
         modules["userbot.config"] = xxx
