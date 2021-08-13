@@ -35,6 +35,7 @@ def load_plugins(plugin_name):
         from .dB.core import HELP, PLUGINS
         import Extre.utils
         import Extre
+        from Extre.config import Config
         from .dB.database import Var
         from .misc import _supporter as xxx
         from .misc._assistant import (
@@ -63,6 +64,7 @@ def load_plugins(plugin_name):
         mod.inline = inline()
         mod.in_pattern = in_pattern
         mod.eod = eod
+        mod.Config = Config
         mod.edit_delete = eod
         mod.LOGS = LOGS
         mod.command = command
