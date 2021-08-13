@@ -9,7 +9,6 @@ from importlib import util
 from pathlib import Path
 from sys import modules
 import Extre.utilss
-from .misc._supporter import bot, extremepro_bot, borg, Andencento
 
 def load_plugins(plugin_name):
     if plugin_name.startswith("__"):
