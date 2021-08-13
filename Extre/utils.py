@@ -31,7 +31,7 @@ def load_plugins(plugin_name):
         mod = util.module_from_spec(spec)
         spec.loader.exec_module(mod)
     else:
-        from . import HNDLR, LOGS, ExtremedB, extremepro_bot
+        from . import HNDLR, LOGS, ExtremedB, extremepro_bot, client
         from .dB.core import HELP, PLUGINS
         import Extre.utils
         import Extre
@@ -58,6 +58,7 @@ def load_plugins(plugin_name):
         mod.tgbot = extremepro_bot.asst
         mod.extremepro_bot = extremepro_bot
         mod.bot = extremepro_bot
+        mod.client = client
         mod.extremepro = extremepro_bot
         mod.owner = owner()
         mod.in_owner = inline_owner()
