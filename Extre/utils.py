@@ -42,8 +42,21 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         LOGS.info("Successfully imported " + shortname)
     else:
-        import Extre.utils
-        from Extre.utilss import *
+        from . import HNDLR, LOGS, ExtremedB, extremepro_bot
+        from .dB.core import HELP, PLUGINS
+        from .dB.database import Var
+        from .misc import _supporter as xxx
+        from .misc._assistant import (
+            asst_cmd,
+            callback,
+            in_pattern,
+            inline,
+            inline_owner,
+            owner,
+        )
+        from .misc._decorators import extremepiro_cmd
+        from .misc._wrappers import eod, eor
+
 
         path = Path(f"plugins/{shortname}.py")
         name = "userbot.plugins.{}".format(shortname)
