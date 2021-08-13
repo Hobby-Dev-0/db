@@ -28,11 +28,6 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     install_requires=[
         "telethon",
-        "python-decouple==3.3",
-        "TgCrypto",
-        "python-dotenv==0.15.0",
-        "cloudscraper",
-        "pymongo",
         "redis",
     ],
     classifiers=[
