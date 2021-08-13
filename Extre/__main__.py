@@ -75,7 +75,7 @@ files = sorted(os.listdir("plugins"))
 for plugin_name in files:
     try:
         if plugin_name.endswith(".py"):
-            load_module(plugin_name[:-3])
+            load_plugin(plugin_name[:-3])
             if not plugin_name.startswith("__") or plugin_name.startswith("_"):
                 LOGS.info(f"ExtremeProUserbot - Official -  Installed - {plugin_name}")
     except Exception:
