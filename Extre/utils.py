@@ -8,7 +8,7 @@
 from importlib import util
 from pathlib import Path
 from sys import modules
-import Extre.utils
+import Extre.utilss
 
 
 def load_plugins(plugin_name):
@@ -35,7 +35,7 @@ def load_plugins(plugin_name):
         )
         from .misc._decorators import extremepiro_cmd
         from .misc._wrappers import eod, eor
-        from .utils import extremepro_cmd, amanpandey_cmd, load_module, humanbytes, register, command, start_assistant, errors_handler, progress, human_to_bytes, time_formatter, is_admin
+        from .utilss import extremepro_cmd, amanpandey_cmd, load_module, humanbytes, register, command, start_assistant, errors_handler, progress, human_to_bytes, time_formatter, is_admin
         path = Path(f"plugins/{plugin_name}.py")
         name = "plugins.{}".format(plugin_name)
         spec = util.spec_from_file_location(name, path)
