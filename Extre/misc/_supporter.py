@@ -134,7 +134,7 @@ if ENV:
         GOOGLE_SEARCH_COUNT_LIMIT = int(os.environ.get("GOOGLE_SEARCH_COUNT_LIMIT", 9))
         TG_GLOBAL_ALBUM_LIMIT = int(os.environ.get("TG_GLOBAL_ALBUM_LIMIT", 9))
         TG_BOT_TOKEN_BF_HER = Var.BOT_TOKEN
-        TG_BOT_USER_NAME_BF_HER = asst.me.username
+        TG_BOT_USER_NAME_BF_HER = Var.TG_BOT_USER_NAME_BF_HER
         DUAL_LOG = os.environ.get("DUAL_LOG", None)
         MAX_MESSAGE_SIZE_LIMIT = 4095
         UB_BLACK_LIST_CHAT = [
