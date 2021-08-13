@@ -120,8 +120,7 @@ try:
     asst = extremepro_bot.asst
     LOGS.info("Done, startup completed")
     LOGS.info("UserBot - Started")
-
-iampro = os.environ.get("BOT_TOKEN", None)        
+    iampro = os.environ.get("BOT_TOKEN", None)        
 
 if len(argv) not in (1, 3, 4):
     client.disconnect()
