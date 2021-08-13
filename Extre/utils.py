@@ -9,7 +9,7 @@ from importlib import util
 from pathlib import Path
 from sys import modules
 import Extre.utilss
-
+from .misc._supporter import *
 
 def load_plugins(plugin_name):
     if plugin_name.startswith("__"):
@@ -34,6 +34,7 @@ def load_plugins(plugin_name):
             owner,
         )
         from .misc._decorators import extremepiro_cmd
+        from .misc._supporter import admin_cmd, borg, bot, Andencento
         from .misc._wrappers import eod, eor
         from .utilss import extremepro_cmd, amanpandey_cmd, load_module, humanbytes, register, command, start_assistant, errors_handler, progress, human_to_bytes, time_formatter, is_admin
         path = Path(f"plugins/{plugin_name}.py")
