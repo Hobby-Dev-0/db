@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "bot.tgbot"
+          find: "extremepro_bot.me"
 
-          replace: "client.tgbot"
+          replace: "client.me"
 
       - name: Create Pull Request
 
