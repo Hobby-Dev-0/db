@@ -151,8 +151,8 @@ if ENV:
         MAX_FLOOD_IN_P_M_s = int(os.environ.get("MAX_FLOOD_IN_P_M_s", 3))
         PM_LOG_GRP_ID = os.environ.get("PM_LOG_GRP_ID", None)
         NC_LOG_P_M_S = bool(os.environ.get("NC_LOG_P_M_S", True))
-        HEROKU_APP_NAME = Var.HEROKU_APP_NAME
-        HEROKU_API_KEY = Var.HEROKU_API
+        HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
+        HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
         PRIVATE_GROUP_BOT_API_ID = int(ExtremedB.get("LOG_CHANNEL"))
         PM_LOGGR_BOT_API_ID = int(ExtremedB.get("LOG_CHANNEL"))
         DB_URI = os.environ.get("DATABASE_URL", None)
