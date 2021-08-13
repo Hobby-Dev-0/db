@@ -484,7 +484,7 @@ async def progress(
         else:
             await event.edit("{}\n{}".format(type_of_ps, tmp))
 
-on = extremepiro_cmd
+on = extremepro_bot
 on = client
 
 def humanbytes(size):
