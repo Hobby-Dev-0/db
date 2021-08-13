@@ -47,7 +47,7 @@ def load_plugins(plugin_name):
             owner,
         )
         from .misc._decorators import extremepiro_cmd
-        from .misc._supporter import admin_cmd, borg, bot, Andencento, sudo_cmd
+        from .misc._supporter import admin_cmd, borg, bot, sudo_cmd
         from .misc._wrappers import eod, eor
         from .utilss import extremepro_cmd, amanpandey_cmd, load_module, humanbytes, register, command, start_assistant, errors_handler, progress, human_to_bytes, time_formatter, is_admin
         path = Path(f"plugins/{plugin_name}.py")
@@ -72,7 +72,7 @@ def load_plugins(plugin_name):
         mod.errors_handler = errors_handler
         mod.bot = bot
         mod.borg = borg
-        mod.Andencento = Andencento
+        mod.Andencento = client
         mod.hndlr = HNDLR
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
