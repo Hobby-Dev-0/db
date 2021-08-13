@@ -1,10 +1,3 @@
-# ExtremeProUserbot - UserBot
-# Copyright (C) 2021 TeamExtremeProUserbot
-#
-# This file is a part of < https://github.com/TeamExtremeProUserbot/ExtremeProUserbot/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamExtremeProUserbot/ExtremeProUserbot/blob/main/LICENSE/>.
-
 import os
 import time
 
@@ -17,7 +10,7 @@ from telethon.errors.rpcerrorlist import (
 )
 from telethon.sessions import StringSession
 
-from .dB.database import Var
+from Extre.var import Var
 
 
 def connect_redis():
@@ -70,14 +63,14 @@ def redis_connection():
     print("Succesfully Established Connection With Redis DataBase.")
     return our_db
 
-
+print("Getting Connection With ExtremePro Database And Telegram Database.")
 def session_file():
     if os.path.exists("client-session.session"):
         _session = "client-session"
-    elif Var.SESSION:
-        _session = StringSession(Var.SESSION)
+    elif Var.STRING_SESSION:
+        _session = StringSession(Var.STRING_SESSION)
     else:
-        print("No String Session found. Quitting...")
+        print("No String Session found. Add Because Without String Session I Cant Run. I am Quitting...")
         exit(1)
     return _session
 
@@ -92,22 +85,4 @@ def client_connection():
         print(f"ERROR - {ap}")
         exit(1)
     return client
-
-
-def vc_connection(ExtremedB):
-    vc_client = None
-    if ExtremedB.get("VC_SESSION"):
-        try:
-            vc_client = TelegramClient(
-                StringSession(ExtremedB.get("VC_SESSION")),
-                api_id=Var.API_ID,
-                api_hash=Var.API_HASH,
-            )
-            return vc_client
-        except AuthKeyDuplicatedError or PhoneNumberInvalidError or EOFError:
-            print("Session String Of VC expired. Please create a new one For VC.")
-        except ApiIdInvalidError:
-            print("Your API ID/API HASH combination is invalid. Kindly recheck.")
-        except Exception as er:
-            print("Error: " + str(er))
-    return
+print("Connected With ExtremePro Database And Telegram Database.")
