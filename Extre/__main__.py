@@ -97,7 +97,7 @@ async def autobot():
         exit(1)
 
 
-if not ExtremedB.get("BOT_TOKEN"):
+if not ExtremedB.get("BTOKEN"):
     extremepro_bot.loop.run_until_complete(autobot())
 
                    
