@@ -43,6 +43,7 @@ def load_module(shortname):
         LOGS.info("Successfully imported " + shortname)
     else:
         import Extre.utils
+        from Extre.utilss import *
 
         path = Path(f"plugins/{shortname}.py")
         name = "userbot.plugins.{}".format(shortname)
