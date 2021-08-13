@@ -63,7 +63,7 @@ def redis_connection():
     print("Succesfully Established Connection With Redis DataBase.")
     return our_db
 
-
+print("Getting Connection With ExtremePro Database And Telegram Database.")
 def session_file():
     if os.path.exists("client-session.session"):
         _session = "client-session"
@@ -85,3 +85,4 @@ def client_connection():
         print(f"ERROR - {ap}")
         exit(1)
     return client
+print("Connected With ExtremePro Database And Telegram Database.")
