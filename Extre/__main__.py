@@ -1,4 +1,3 @@
-  
 # ExtremeProUserbot - UserBot
 # Copyright (C) 2021 TeamExtremeProUserbot
 #
@@ -164,10 +163,10 @@ if not ExtremedB.get("BOT_TOKEN"):
 
 async def istart(ult):
     await extremepro_bot.start(ult)
-    client.me = await extremepro_bot.get_me()
-    extremepro_bot.uid = telethon.utils.get_peer_id(client.me)
-    extremepro_bot.first_name = client.me.first_name
-    if not client.me.bot:
+    extremepro_bot.me = await extremepro_bot.get_me()
+    extremepro_bot.uid = telethon.utils.get_peer_id(extremepro_bot.me)
+    extremepro_bot.first_name = extremepro_bot.me.first_name
+    if not extremepro_bot.me.bot:
         ExtremedB.set("OWNER_ID", extremepro_bot.uid)
 
 
@@ -250,7 +249,7 @@ BOT_TOKEN = ExtremedB.get("BOT_TOKEN")
 LOGS.info("Starting ExtremeProUserbot...")
 try:
     extremepro_bot.asst = TelegramClient(
-        "asst-session", api_id=Var.API_ID, api_hash=Var.API_HASH
+        "asst-session", api_id=Var.APP_ID, api_hash=Var.API_HASH
     ).start(bot_token=BOT_TOKEN)
     asst = extremepro_bot.asst
     extremepro_bot.loop.run_until_complete(istart(asst))
@@ -328,10 +327,10 @@ async def customize():
         if xx.photo is None:
             LOGS.info("Customising Ur Assistant Bot in @BOTFATHER")
             UL = f"@{asst.me.username}"
-            if (client.me.username) is None:
-                sir = client.me.first_name
+            if (extremepro_bot.me.username) is None:
+                sir = extremepro_bot.me.first_name
             else:
-                sir = f"@{client.me.username}"
+                sir = f"@{extremepro_bot.me.username}"
             await extremepro_bot.send_message(
                 chat_id, "Auto Customisation Started on @botfather"
             )
@@ -376,7 +375,7 @@ async def customize():
 # some stuffs
 async def ready():
     chat_id = int(ExtremedB.get("LOG_CHANNEL"))
-    MSG = f"**ExtremeProUserbot has been deployed!**\n➖➖➖➖➖➖➖➖➖\n**UserMode**: [{client.me.first_name}](tg://user?id={client.me.id})\n**Assistant**: @{asst.me.username}\n➖➖➖➖➖➖➖➖➖\n**Support**: @TeamExtremeProUserbot\n➖➖➖➖➖➖➖➖➖"
+    MSG = f"**ExtremeProUserbot has been deployed!**\n➖➖➖➖➖➖➖➖➖\n**UserMode**: [{extremepro_bot.me.first_name}](tg://user?id={extremepro_bot.me.id})\n**Assistant**: @{asst.me.username}\n➖➖➖➖➖➖➖➖➖\n**Support**: @TeamExtremeProUserbot\n➖➖➖➖➖➖➖➖➖"
     BTTS = [Button.inline("Help", "open")]
     updava = await updater()
     try:
