@@ -8,8 +8,7 @@ from telethon import TelegramClient
 from Extre import *
 import traceback
 from Extre.dB.database import * 
-from Extre.utils import load_module
-from Extre.utils import start_assistant
+from Extre.utilss import *
 from Extre import LOAD_PLUG, BOTLOG_CHATID, LOGS
 from Extre import extremepro_bot
 from pathlib import Path
