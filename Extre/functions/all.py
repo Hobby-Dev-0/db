@@ -77,6 +77,7 @@ from ..dB.core import *
 from ..dB.database import Var
 from ..misc import *
 from ..misc._wrappers import *
+from ..utilss import *
 from ..utils import *
 from ._FastTelethon import download_file as downloadable
 from ._FastTelethon import upload_file as uploadable
