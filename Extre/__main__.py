@@ -137,14 +137,7 @@ except AccessTokenExpiredError:
 except BaseException:
     LOGS.info("Error: " + str(traceback.print_exc()))
     exit(1)
-
-
-if str(extremepro_bot.uid) not in DEVLIST:
-    chat = eval(ExtremedB.get("BLACKLIST_CHATS"))
-    if -1001327032795 not in chat:
-        chat.append(-1001327032795)
-        ExtremedB.set("BLACKLIST_CHATS", str(chat))
-
+#
 iampro = os.environ.get("BOT_TOKEN", None)        
 
 if len(argv) not in (1, 3, 4):
