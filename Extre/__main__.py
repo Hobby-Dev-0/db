@@ -118,26 +118,9 @@ try:
         "asst-session", api_id=Var.API_ID, api_hash=Var.API_HASH
     ).start(bot_token=BOT_TOKEN)
     asst = extremepro_bot.asst
-    extremepro_bot.loop.run_until_complete(istart(asst))
-    extremepro_bot.loop.run_until_complete(bot_info(asst))
     LOGS.info("Done, startup completed")
     LOGS.info("UserBot - Started")
-except AuthKeyDuplicatedError or PhoneNumberInvalidError or EOFError:
-    LOGS.info("Session String expired. Please create a new one! ExtremeProUserbot is stopping...")
-    exit(1)
-except ApiIdInvalidError:
-    LOGS.info("Your API ID/API HASH combination is invalid. Kindly recheck.")
-    exit(1)
-except AccessTokenExpiredError:
-    ExtremedB.delete("BOT_TOKEN")
-    LOGS.info(
-        "BOT_TOKEN expired , So Quitted The Process, Restart Again To create A new Bot. Or Set BOT_TOKEN env In Vars"
-    )
-    exit(1)
-except BaseException:
-    LOGS.info("Error: " + str(traceback.print_exc()))
-    exit(1)
-#
+
 iampro = os.environ.get("BOT_TOKEN", None)        
 
 if len(argv) not in (1, 3, 4):
