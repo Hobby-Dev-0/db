@@ -31,7 +31,7 @@ bot = extremepro_bot
 borg = extremepro_bot
 friday = extremepro_bot
 jarvis = extremepro_bot
-
+Andencento = extremepro_bot
 hndlr = "\\" + HNDLR
 
 
