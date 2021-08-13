@@ -21,8 +21,7 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from Extre.variables import Var
 
-from Extre.extremecmd import extremepiro_cmd
-
+from Extre.utilss import *
 
 from Extre import *
 
@@ -58,6 +57,7 @@ def load_module(shortname):
         mod.Andencento = client
         mod.borg =client
         mod.extreme_cmd = bot
+        mod.on_cmd = extremepiro_cmd
         mod.ub = extremepro_bot
         mod.tgbot = bot.tgbot
         mod.extremepro_bot = extremepro_bot
@@ -400,9 +400,6 @@ async def edit_or_reply(event, text, parse_mode=None, link_preview=None):
         return await event.reply(text, parse_mode=parse_mode, link_preview=link_preview)
     return await event.edit(text, parse_mode=parse_mode, link_preview=link_preview)
 
-
-# from paperplaneextended
-on = bot.on
 
 
 def on(**args):
