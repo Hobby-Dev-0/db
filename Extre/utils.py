@@ -73,7 +73,7 @@ def load_module(shortname):
         mod.extreme_cmd = bot
         mod.on_cmd = extremepiro_cmd
         mod.ub = extremepro_bot
-        mod.tgbot = bot.tgbot
+        mod.tgbot = client.tgbot
         mod.extremepro_bot = extremepro_bot
         mod.ExtremedB = ExtremedB
         mod.extreme = extremepro_bot
@@ -85,7 +85,7 @@ def load_module(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         mod.LOGS = LOGS
-        mod.tgbot = bot.tgbot
+        mod.tgbot = client.tgbot
         mod.sudo_cmd = sudo_cmd
         mod.extremepro_cmd = extremepro_cmd
         sys.modules["userbot"] = Extre
@@ -736,7 +736,7 @@ def start_assistant(shortname):
         name = "assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.tgbot = bot.tgbot
+        mod.tgbot = client.tgbot
         spec.loader.exec_module(mod)
         sys.modules["assistant" + shortname] = mod
         print("Assistant Has imported " + shortname)
