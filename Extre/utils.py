@@ -13,7 +13,7 @@ from Extre.utilss import *
 admin_cmd = admin_cmd
 sudo_cmd = sudo_cmd
 command = command
-error_handlers = error_handlers
+errors_handler = errors_handler
 progress = progress
 
 
