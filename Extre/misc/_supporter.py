@@ -123,7 +123,7 @@ if ENV:
         SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get(
             "SCREEN_SHOT_LAYER_ACCESS_KEY", None
         )
-        SUDO_COMMAND_HAND_LER = hndlr
+        SUDO_COMMAND_HAND_LER = os.environ.get("HANDLER", None)
         TMP_DOWNLOAD_DIRECTORY = os.environ.get(
             "TMP_DOWNLOAD_DIRECTORY", "resources/downloads/"
         )
@@ -163,8 +163,8 @@ if ENV:
             os.environ.get("NO_OF_COLOUMS_DISPLAYED_IN_H_ME_CMD", 3)
         )
         EMOJI_TO_DISPLAY_IN_HELP = os.environ.get("EMOJI_TO_DISPLAY_IN_HELP", "🔰")
-        HANDLR = hndlr
-        SUDO_USERS = sudos
+        HANDLR = os.environ.get("HANDLER", None)
+        SUDO_USERS = os.environ.get("SUDO_USERS", None)
         GROUP_REG_SED_EX_BOT_S = os.environ.get(
             "GROUP_REG_SED_EX_BOT_S", r"(regex|moku|BananaButler_|rgx|l4mR)bot"
         )
