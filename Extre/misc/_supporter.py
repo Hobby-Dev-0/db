@@ -22,7 +22,7 @@ from .. import ExtremedB, extremepro_bot
 from ..dB.core import LIST
 from ..dB.database import Var
 
-ALIVE_NAME = int(ExtremedB.get("ALIVE_NAME"))
+ALIVE_NAME = ExtremedB.get("ALIVE_NAME")
 BOTLOG = int(ExtremedB.get("LOG_CHANNEL"))
 BOTLOG_CHATID = int(ExtremedB.get("LOG_CHANNEL"))
 
