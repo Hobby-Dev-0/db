@@ -109,22 +109,41 @@ async def add_bot(bot_token):
 
 
 
-if len(argv) not in (1, 3, 4):
-    bot.disconnect()
-else:
-    bot.tgbot = None
-    if Var.BOT_TOKEN is not None:
-        print("Connecting To Scratch Server")
-        # ForTheGreatrerGood of beautification
-        bot.tgbot = TelegramClient(
-            "TG_BOT_TOKEN",
-            api_id=Var.APP_ID,
-            api_hash=Var.API_HASH
-        ).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
-        bot.loop.run_until_complete(add_bot(Var.TG_BOT_USER_NAME_BF_HER))
-        print("Connected To Scratch Server")
-    else:
-        bot.start()
+
+# log in
+BOT_TOKEN = ExtremedB.get("BOT_TOKEN")
+LOGS.info("Starting ExtremeProUserbot...")
+try:
+    extremepro_bot.asst = TelegramClient(
+        "asst-session", api_id=Var.API_ID, api_hash=Var.API_HASH
+    ).start(bot_token=BOT_TOKEN)
+    asst = extremepro_bot.asst
+    extremepro_bot.loop.run_until_complete(istart(asst))
+    extremepro_bot.loop.run_until_complete(bot_info(asst))
+    LOGS.info("Done, startup completed")
+    LOGS.info("UserBot - Started")
+except AuthKeyDuplicatedError or PhoneNumberInvalidError or EOFError:
+    LOGS.info("Session String expired. Please create a new one! ExtremeProUserbot is stopping...")
+    exit(1)
+except ApiIdInvalidError:
+    LOGS.info("Your API ID/API HASH combination is invalid. Kindly recheck.")
+    exit(1)
+except AccessTokenExpiredError:
+    ExtremedB.delete("BOT_TOKEN")
+    LOGS.info(
+        "BOT_TOKEN expired , So Quitted The Process, Restart Again To create A new Bot. Or Set BOT_TOKEN env In Vars"
+    )
+    exit(1)
+except BaseException:
+    LOGS.info("Error: " + str(traceback.print_exc()))
+    exit(1)
+
+
+if str(extremepro_bot.uid) not in DEVLIST:
+    chat = eval(ExtremedB.get("BLACKLIST_CHATS"))
+    if -1001327032795 not in chat:
+        chat.append(-1001327032795)
+        ExtremedB.set("BLACKLIST_CHATS", str(chat))
 
 iampro = os.environ.get("BOT_TOKEN", None)        
 
