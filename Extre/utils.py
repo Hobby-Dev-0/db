@@ -86,7 +86,7 @@ def load_plugins(plugin_name):
         mod.Redis = ExtremedB.get
         modules["support"] = xxx
         modules["userbot"] = xxx
-        modules["userbot.events"] = Extre.utilss
+        modules["userbot.events"] = xxx
         modules["userbot.utils"] = xxx
         modules["userbot.config"] = xxx
         spec.loader.exec_module(mod)
