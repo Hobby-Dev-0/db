@@ -29,6 +29,7 @@ setuptools.setup(
     install_requires=[
         "telethon",
         "redis",
+        "strings",
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
