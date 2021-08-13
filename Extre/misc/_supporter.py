@@ -137,9 +137,7 @@ if ENV:
         TG_BOT_USER_NAME_BF_HER = Var.TG_BOT_USER_NAME_BF_HER
         DUAL_LOG = os.environ.get("DUAL_LOG", None)
         MAX_MESSAGE_SIZE_LIMIT = 4095
-        UB_BLACK_LIST_CHAT = [
-            int(blacklist) for blacklist in ExtremedB.get("BLACKLIST_CHATS")
-        ]
+        UB_BLACK_LIST_CHAT = os.environ.get("BLACK_LIST_CHATS", None)
         MAX_ANTI_FLOOD_MESSAGES = 10
         ANTI_FLOOD_WARN_MODE = types.ChatBannedRights(
             until_date=None, view_messages=None, send_messages=True
