@@ -15,9 +15,10 @@ from pathlib import Path
 import asyncio
 import telethon.utils
 
-
+from .var import Var
 
 async def autobot():
+    from .var import Var
     await extremepro_bot.start()
     if Var.BOT_TOKEN:
         ExtremedB.set("BOT_TOKEN", str(Var.BOT_TOKEN))
