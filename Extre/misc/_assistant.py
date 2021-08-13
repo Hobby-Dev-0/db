@@ -18,13 +18,14 @@ from telethon.tl.types import (
 from telethon.utils import get_display_name
 
 from . import owner_and_sudos, extremepro_bot
+from Extre import *
 
 PROPIC = "https://telegra.ph/file/75520b56df7b9159438cb.jpg"
 
 MSG = f"""
 **ExtremeProUserbot - UserBot**
 ➖➖➖➖➖➖➖➖➖➖
-**Owner**: [{get_display_name(extremepro_bot.me)}](tg://user?id={extremepro_bot.uid})
+**Owner**: [{get_display_name(client.me)}](tg://user?id={extremepro_bot.uid})
 **Support**: @TeamExtremeProUserbot
 ➖➖➖➖➖➖➖➖➖➖
 """
