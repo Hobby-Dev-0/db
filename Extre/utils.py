@@ -8,7 +8,10 @@
 from importlib import util
 from pathlib import Path
 from sys import modules
-import Extre.utilss
+from Extre.utilss import admin_cmd, sudo_cmd
+
+admin_cmd = admin_cmd
+sudo_cmd = sudo_cmd
 
 def load_plugins(plugin_name):
     if plugin_name.startswith("__"):
