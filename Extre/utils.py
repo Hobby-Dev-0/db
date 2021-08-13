@@ -91,8 +91,7 @@ def load_module(shortname):
         mod.amanpandey_cmd = amanpandey_cmd
         mod.edit_or_reply = edit_or_reply
         mod.logger = logging.getLogger(shortname)
-        # support for uniborg
-        sys.modules["uniborg.util"] = Extre.utils or userbot.utils or pyUltroid.utils or None
+        # support for unibor
         mod.Config = Config
         mod.borg = bot
         mod.edit_or_reply = edit_or_reply
