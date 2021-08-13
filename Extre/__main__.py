@@ -220,11 +220,11 @@ async def autopilot():
     pfpa = await extremepro_bot.download_profile_photo(chat_id)
     if not pfpa:
         urllib.request.urlretrieve(
-            "https://telegra.ph/file/bac3a1c21912a7b35c797.jpg", "channelphoto.jpg"
+            "https://telegra.ph/file/c70894d968a5823d04f0e.png", "channelphoto.png"
         )
-        ll = await extremepro_bot.upload_file("channelphoto.jpg")
+        ll = await extremepro_bot.upload_file("channelphoto.png")
         await extremepro_bot(EditPhotoRequest(chat_id, InputChatUploadedPhoto(ll)))
-        os.remove("channelphoto.jpg")
+        os.remove("channelphoto.png")
     else:
         os.remove(pfpa)
 
@@ -239,9 +239,9 @@ async def bot_info(asst):
 
 
 LOGS.info("Initialising...")
-LOGS.info(f"py-ExtremeProUserbot Version - {ver}")
+LOGS.info(f"ExtremeProUserbot Version - {ver}")
 LOGS.info(f"Telethon Version - {vers}")
-LOGS.info("ExtremeProUserbot Version - 0.0.8.1")
+LOGS.info("ExtremeProUserbot Version - 0.0.1")
 
 
 # log in
@@ -294,30 +294,6 @@ for plugin_name in files:
         LOGS.info(str(traceback.print_exc()))
 
 
-# for assistant
-files = sorted(os.listdir("assistant"))
-for plugin_name in files:
-    try:
-        if plugin_name.endswith(".py"):
-            load_assistant(plugin_name[:-3])
-            if not plugin_name.startswith("__") or plugin_name.startswith("_"):
-                LOGS.info(f"ExtremeProUserbot - Assistant -  Installed - {plugin_name}")
-    except Exception:
-        LOGS.info(f"ExtremeProUserbot - Assistant - ERROR - {plugin_name}")
-        LOGS.info(str(traceback.print_exc()))
-
-
-
-# chat via assistant
-pmbot = ExtremedB.get("PMBOT")
-if pmbot == "True":
-    files = sorted(os.listdir("assistant/pmbot"))
-    for plugin_name in files:
-        if plugin_name.endswith(".py"):
-            load_pmbot(plugin_name[:-3])
-    LOGS.info(f"ExtremeProUserbot - PM Bot Message Forwards - Enabled.")
-
-# customize assistant
 
 
 async def customize():
@@ -418,8 +394,6 @@ except BaseException:
 
 
 extremepro_bot.loop.run_until_complete(customize())
-if Plug_channel:
-    extremepro_bot.loop.run_until_complete(plug())
 extremepro_bot.loop.run_until_complete(ready())
 
 LOGS.info(
