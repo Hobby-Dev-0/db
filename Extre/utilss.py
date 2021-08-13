@@ -73,6 +73,7 @@ def load_module(shortname):
         mod.logger = logging.getLogger(shortname)
         mod.LOGS = LOGS
         mod.tgbot = client.tgbot
+        mod.client = client
         mod.sudo_cmd = sudo_cmd
         mod.extremepro_cmd = extremepro_cmd
         mod.amanpandey_cmd = amanpandey_cmd
