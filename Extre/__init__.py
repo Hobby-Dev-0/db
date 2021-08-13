@@ -5,7 +5,13 @@ import sys
 import time
 from logging import DEBUG, INFO, basicConfig, getLogger
 import pylast
-
+os.system("pip3 install 
+    "python-decouple==3.3",
+    "py-tgcalls==0.5.2",
+    "python-dotenv==0.15.0",
+    "cloudscraper",
+    "aiofiles",
+    "aiohttp")
 from dotenv import load_dotenv
 from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
