@@ -27,6 +27,7 @@ ExtremedB = redis_connection()
 
 extremepro_bot = client_connection()
 
+bot = extremepro_bot
 
 if ExtremedB.get("HNDLR"):
     HNDLR = ExtremedB.get("HNDLR")
@@ -68,13 +69,6 @@ CLIENT_API = os.environ.get("CLIENT2_API_ID", None)
 CLIENT_API_HASH = os.environ.get("CLIENT2_API_HASH", None)
 
 
-if Var.STRING_SESSION:
-    session_name = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
-else:
-    session_name = "startup"
-    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
-    
 
 if Client2:
     session_name = str(Client2)
