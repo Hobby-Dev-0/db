@@ -27,8 +27,13 @@ setuptools.setup(
     license=license,
     packages=setuptools.find_packages(),
     install_requires=[
-        "telethon",
         "redis",
+        "python-decouple",
+        "py-tgcalls==0.5.2",
+        "python-dotenv"
+        "aiohttp",
+        "cloudscraper",
+        "aiofiles",
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
