@@ -12,7 +12,14 @@ from Extre.utilss import *
 
 admin_cmd = admin_cmd
 sudo_cmd = sudo_cmd
+command = command
+progress = progress
+
+
 edit_or_reply = edit_or_reply
+
+
+
 def load_plugins(plugin_name):
     if plugin_name.startswith("__"):
         pass
@@ -71,6 +78,7 @@ def load_plugins(plugin_name):
         mod.callback = callback
         mod.Redis = ExtremedB.get
         modules["support"] = xxx
+        modules["var"] = Extre.var or Extre.variables
         modules["userbot"] = xxx
         modules["userbot.utils"] = xxx
         modules["userbot.config"] = xxx
