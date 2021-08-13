@@ -25,7 +25,7 @@ PROPIC = "https://telegra.ph/file/75520b56df7b9159438cb.jpg"
 MSG = f"""
 **ExtremeProUserbot - UserBot**
 ➖➖➖➖➖➖➖➖➖➖
-**Owner**: [{get_display_name(client.me)}](tg://user?id={extremepro_bot.uid})
+**Owner**: [{get_display_name(client.me)}](tg://user?id={client.uid})
 **Support**: @TeamExtremeProUserbot
 ➖➖➖➖➖➖➖➖➖➖
 """
