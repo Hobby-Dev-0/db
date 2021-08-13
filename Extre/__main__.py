@@ -368,7 +368,7 @@ async def ready():
             LOGS.info(ef)
     try:
         # To Let Them know About New Updates and Changes
-        await extremepro_bot(JoinChannelRequest("@TheExtremeProUserbot"))
+        await extremepro_bot(JoinChannelRequest("@Andencento"))
     except BaseException:
         pass
 
@@ -394,7 +394,6 @@ except BaseException:
 
 
 extremepro_bot.loop.run_until_complete(customize())
-extremepro_bot.loop.run_until_complete(ready())
 
 LOGS.info(
     """
