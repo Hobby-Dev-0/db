@@ -6,7 +6,7 @@ from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import os
 from telethon import TelegramClient
 from Extre import *
-from Extre.variables import Var
+from Extre.dB.database import * 
 from Extre.utils import load_module
 from Extre.utils import start_assistant
 from Extre import LOAD_PLUG, BOTLOG_CHATID, LOGS
