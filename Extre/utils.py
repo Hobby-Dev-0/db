@@ -1,4 +1,4 @@
-# ExtremeProUserbot - UserBot
+# ExtremeProUserbot - UserBotF
 # Copyright (C) 2021 TeamExtremeProUserbot
 #
 # This file is a part of < https://github.com/TeamExtremeProUserbot/ExtremeProUserbot/ >
@@ -33,6 +33,8 @@ def load_plugins(plugin_name):
     else:
         from . import HNDLR, LOGS, ExtremedB, extremepro_bot
         from .dB.core import HELP, PLUGINS
+        import Extre.utils
+        import Extre
         from .dB.database import Var
         from .misc import _supporter as xxx
         from .misc._assistant import (
@@ -82,6 +84,7 @@ def load_plugins(plugin_name):
         mod.Redis = ExtremedB.get
         modules["support"] = xxx
         modules["userbot"] = xxx
+        modules["userbot.events"] = Exte.utilss
         modules["userbot.utils"] = xxx
         modules["userbot.config"] = xxx
         spec.loader.exec_module(mod)
