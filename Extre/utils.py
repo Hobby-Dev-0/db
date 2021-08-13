@@ -9,7 +9,7 @@ from importlib import util
 from pathlib import Path
 from sys import modules
 import Extre.utilss
-from .misc._supporter import *
+from .misc._supporter import bot, extremepro_bot, borg, Andencento
 
 def load_plugins(plugin_name):
     if plugin_name.startswith("__"):
@@ -53,7 +53,12 @@ def load_plugins(plugin_name):
         mod.eod = eod
         mod.edit_delete = eod
         mod.LOGS = LOGS
+        mot.bot = bot
+        mod.borg = borg
+        mod.Andencento = Andencento
         mod.hndlr = HNDLR
+        mod.admin_cmd = admin_cmd
+        mod.sudo_cmd = sudo_cmd
         mod.HNDLR = HNDLR
         mod.Var = Var
         mod.eor = eor
