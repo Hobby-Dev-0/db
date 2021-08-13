@@ -472,9 +472,7 @@ async def progress(
             await event.edit("{}\n{}".format(type_of_ps, tmp))
             
             
-            
-from .misc._decorators import extremepiro_cmd
-on = extremepiro_cmd
+
 on = client
 
 def humanbytes(size):
